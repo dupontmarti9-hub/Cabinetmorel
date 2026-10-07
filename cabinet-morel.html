@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cabinet Morel — Conseil en stratégie et transformation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--w:#fff;--k:#000;--g:#3a3d42;--l:#e3e4e6;--n:#0b1f3a;--gap:24px;--m:72px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Archivo,"Helvetica Neue",Arial,sans-serif;background:var(--w);color:var(--k);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.g{display:grid;grid-template-columns:repeat(12,1fr);column-gap:var(--gap);max-width:1440px;margin:0 auto;padding:0 var(--m)}
+.small{font-size:13px;line-height:1.5;color:var(--g)}
+
+/* navigation */
+header{border-bottom:1px solid var(--k)}
+header .g{height:80px;align-items:center}
+.logo{grid-column:1/4;font-weight:700;font-size:20px;letter-spacing:-.02em}
+nav{grid-column:4/11;display:flex;gap:40px;font-size:14px;color:var(--g)}
+nav a:hover,.cta:hover{color:var(--n)}
+.cta{grid-column:11/13;justify-self:end;font-size:14px;font-weight:500;border-bottom:2px solid var(--k);padding-bottom:2px}
+
+/* hero */
+.hero{padding-top:56px}
+.hero .meta{grid-column:1/4;padding-top:14px}
+.hero .meta p+p{margin-top:4px}
+h1{grid-column:4/13;font-size:112px;line-height:.96;letter-spacing:-.045em;font-weight:700}
+.hero .lead{grid-column:1/4;grid-row:2;padding-top:48px;border-top:0;font-size:15px;color:var(--g);align-self:start;margin-top:48px;border-top:1px solid var(--k);padding-top:16px}
+.hero .lead a{display:inline-block;margin-top:20px;color:var(--k);font-weight:500;border-bottom:2px solid var(--k)}
+.hero figure{grid-column:4/13;grid-row:2;margin-top:48px;height:420px;background:var(--g)}
+.hero figcaption{grid-column:4/13;grid-row:3;padding-top:10px}
+
+/* chiffres */
+.stats{padding-top:72px}
+.stat{grid-column:span 3;border-top:3px solid var(--k);padding-top:16px}
+.stat b{display:block;font-size:104px;line-height:1;letter-spacing:-.05em;font-weight:700;font-variant-numeric:tabular-nums}
+.stat b i{font-style:normal;font-size:40px;letter-spacing:-.02em;margin-left:6px;color:var(--g);font-weight:500}
+.stat span{display:block;margin-top:14px;max-width:220px}
+
+/* expertises */
+.exp{padding-top:88px}
+.exp h2{grid-column:1/4;font-size:14px;font-weight:600;border-top:3px solid var(--k);padding-top:16px}
+.row{grid-column:4/13;display:grid;grid-template-columns:repeat(9,1fr);column-gap:var(--gap);border-top:1px solid var(--k);padding:26px 0 30px}
+.row:first-of-type{border-top:3px solid var(--k)}
+.row h3{grid-column:1/5;font-size:32px;line-height:1.1;letter-spacing:-.03em;font-weight:600}
+.row p{grid-column:5/9;color:var(--g);font-size:15px}
+.row a{grid-column:9/10;justify-self:end;font-size:14px;font-weight:500}
+.row:hover h3{color:var(--n)}
+.exp .g{row-gap:0}
+
+/* bloc sombre */
+.dark{background:var(--n);color:var(--w);margin-top:96px;padding:56px 0}
+.dark .g{align-items:stretch}
+.dark .txt{grid-column:1/7;display:flex;flex-direction:column;justify-content:space-between;border-top:1px solid rgba(255,255,255,.5);padding-top:16px}
+.dark .txt small{font-size:13px;color:#aab4c4}
+.dark .big{font-size:200px;line-height:.9;letter-spacing:-.06em;font-weight:700;font-variant-numeric:tabular-nums}
+.dark .big i{font-style:normal;font-size:72px;letter-spacing:-.03em;margin-left:8px}
+.dark p{font-size:20px;line-height:1.35;letter-spacing:-.01em;max-width:440px;margin-top:20px}
+.dark figure{grid-column:7/13;height:360px;background:var(--g)}
+
+/* pied de page */
+footer{padding:72px 0 48px}
+footer .g{row-gap:48px}
+footer .brand{grid-column:1/4;font-weight:700;font-size:20px;letter-spacing:-.02em}
+footer .c{grid-column:span 3;border-top:1px solid var(--k);padding-top:16px;font-size:14px}
+footer .c:first-of-type{grid-column:4/7}
+footer .c b{display:block;font-weight:600;margin-bottom:6px}
+footer .c span{color:var(--g)}
+footer .legal{grid-column:1/13;display:flex;justify-content:space-between;border-top:3px solid var(--k);padding-top:14px}
+
+@media(max-width:900px){
+ :root{--m:24px}
+ nav{display:none}.logo{grid-column:1/8}.cta{grid-column:8/13}
+ h1{grid-column:1/13;font-size:52px;margin-top:24px}
+ .hero .meta,.hero .lead,.hero figure,.hero figcaption{grid-column:1/13;grid-row:auto}
+ .hero figure{height:260px}
+ .stat{grid-column:span 6;margin-bottom:32px}.stat b{font-size:56px}
+ .exp h2,.row{grid-column:1/13}.row{display:block}.row h3{font-size:26px}.row p{margin-top:8px}.row a{display:inline-block;margin-top:12px}
+ .dark .txt,.dark figure{grid-column:1/13}.dark .big{font-size:110px}.dark figure{margin-top:32px;height:240px}
+ footer .brand,footer .c,footer .c:first-of-type{grid-column:1/13}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="g">
+  <a class="logo" href="#">Cabinet Morel</a>
+  <nav>
+   <a href="#expertises">Expertises</a>
+   <a href="#references">Références</a>
+   <a href="#cabinet">Le cabinet</a>
+   <a href="#publications">Publications</a>
+  </nav>
+  <a class="cta" href="#contact">Nous contacter</a>
+ </div>
+</header>
+
+<main>
+ <section class="hero">
+  <div class="g">
+   <div class="meta small">
+    <p>Conseil en stratégie</p>
+    <p>et transformation</p>
+    <p>Paris · Lyon · Francfort</p>
+   </div>
+   <h1>Décider avec<br>précision.</h1>
+
+   <div class="lead">
+    <p>Nous accompagnons les comités de direction dans les décisions qui engagent la valeur de l’entreprise sur dix ans.</p>
+    <a href="#expertises">Découvrir nos expertises</a>
+   </div>
+   <figure><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80" alt="Façade vitrée d’un immeuble de bureaux"></figure>
+   <p class="small figcap" style="grid-column:4/13;grid-row:3;padding-top:10px">Siège européen d’un client industriel, mission d’optimisation immobilière, 2025.</p>
+  </div>
+ </section>
+
+ <section class="stats" id="cabinet">
+  <div class="g">
+   <div class="stat"><b>28<i>ans</i></b><span class="small">d’expérience en conseil auprès des directions générales</span></div>
+   <div class="stat"><b>340</b><span class="small">missions menées pour des groupes cotés et des fonds d’investissement</span></div>
+   <div class="stat"><b>17</b><span class="small">pays d’intervention en Europe, au Moyen-Orient et en Afrique</span></div>
+   <div class="stat"><b>92<i>%</i></b><span class="small">de clients qui nous confient une seconde mission</span></div>
+  </div>
+ </section>
+
+ <section class="exp" id="expertises">
+  <div class="g">
+   <h2>Expertises</h2>
+   <div class="row"><h3>Stratégie et croissance</h3><p>Positionnement, plans à cinq ans, arbitrages de portefeuille et trajectoires d’expansion internationale.</p><a href="#">Voir</a></div>
+   <div class="row" style="grid-column:4/13"><h3>Finance et restructuration</h3><p>Redressement, cession d’actifs, due diligence et pilotage de la création de valeur.</p><a href="#">Voir</a></div>
+   <div class="row" style="grid-column:4/13"><h3>Transformation opérationnelle</h3><p>Organisation, chaînes d’approvisionnement et programmes de performance à grande échelle.</p><a href="#">Voir</a></div>
+   <div class="row" style="grid-column:4/13"><h3>Immobilier et infrastructures</h3><p>Stratégie patrimoniale, grands projets urbains et évaluation d’investissements de long terme.</p><a href="#">Voir</a></div>
+  </div>
+ </section>
+
+ <section class="dark" id="references">
+  <div class="g">
+   <div class="txt">
+    <small>Mission de redressement, groupe industriel européen, 2023–2025</small>
+    <div>
+     <div class="big">+38<i>%</i></div>
+     <p>de marge opérationnelle en vingt-quatre mois, sur douze sites de production.</p>
+    </div>
+   </div>
+   <figure><img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1400&q=80" alt="Vue aérienne d’une métropole"></figure>
+  </div>
+ </section>
+</main>
+
+<footer id="contact">
+ <div class="g">
+  <div class="brand">Cabinet Morel</div>
+  <div class="c"><b>Paris</b><span>18 avenue de l’Opéra<br>75001 Paris</span></div>
+  <div class="c"><b>Nouvelles missions</b><span>contact@cabinet-morel.fr<br>+33 1 00 00 00 00</span></div>
+  <div class="c"><b>Publications</b><span>Rapport annuel<br>Études sectorielles</span></div>
+  <div class="legal small"><span>© 2026 Cabinet Morel</span><span>Mentions légales · Confidentialité</span></div>
+ </div>
+</footer>
+
+</body>
+</html>
